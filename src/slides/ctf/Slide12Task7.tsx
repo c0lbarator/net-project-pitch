@@ -8,7 +8,7 @@ export default function Slide12Task7() {
       description={
         <>
           <p className="mb-3">
-            Совет директоров <em>ClosedAI</i> увольняет CEO Сэма Базальтмана.
+            Совет директоров <em>ClosedAI</em> увольняет CEO Сэма Базальтмана.
             Накануне у Сэма был доступ к серверу обучения — и он
             модифицировал финальные веса флагманской модели <strong>SmolaLM</strong>.
           </p>
