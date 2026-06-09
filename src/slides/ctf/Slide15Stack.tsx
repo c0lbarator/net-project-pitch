@@ -4,16 +4,16 @@ import { MSSlideLayout } from '@/components/slides/MSSlideLayout';
 const stack = [
   ['CTFd', 'Платформа'],
   ['Docker', 'Контейнеризация'],
-  ['Nginx', 'HTTPS / раздача файлов'],
+  ['Caddy', 'Reverse-proxy + TLS (Let’s Encrypt)'],
+  ['DuckDNS', 'Публичный домен'],
   ['Python + Scapy', 'Перехват пакетов'],
   ['iptables / NFQUEUE', 'Сетевой фильтр'],
-  ['DuckDNS', 'Публичный домен'],
-  ['Let’s Encrypt', 'TLS-сертификат'],
   ['PyTorch / pickle', 'Задача с RCE'],
   ['LLM API', 'AI-задача'],
+  ['Pillow / pyzbar', 'Стего и QR'],
 ];
 
-export default function Slide10Stack() {
+export default function Slide15Stack() {
   return (
     <MSSlideLayout>
       <div className="flex flex-col h-full px-20 py-16">

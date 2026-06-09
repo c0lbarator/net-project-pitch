@@ -3,20 +3,23 @@ import { MSSlideLayout } from '@/components/slides/MSSlideLayout';
 
 const tasks = [
   { id: '67kb', name: 'Сикс севен', cat: 'Network', desc: 'Эмуляция ТСПУ: SNI Spoofing для обхода блокировки.' },
-  { id: 'spoof-maleev', name: 'Посторонним вход воспрещён', cat: 'Network', desc: 'E-mail спуфинг при отсутствии DMARC.' },
-  { id: 'morse-gif', name: 'GIF-морзянка', cat: 'Network', desc: 'Сообщение, спрятанное в кадрах GIF азбукой Морзе.' },
+  { id: 'morse-gif', name: 'Гифка вместо тысячи слов', cat: 'Crypto', desc: 'Сообщение, спрятанное в кадрах GIF азбукой Морзе.' },
+  { id: 'qrcode-cipher', name: 'Не сканируй, а то заберут', cat: 'Stegano', desc: 'Полезная нагрузка скрыта в значениях пикселей QR-кода.' },
+  { id: 'nanogram', name: 'Harder than a Crossword', cat: 'Stegano', desc: 'Нонограмма → QR-код → ключ к архиву.' },
+  { id: 'ai-secret-keeper', name: 'ХранИИтель секретов', cat: 'AI', desc: 'Prompt injection: вытащить секрет из system prompt.' },
+  { id: 'spoof-maleev', name: 'Посторонним вход воспрещён', cat: 'Network', desc: 'E-mail спуфинг: сервер не проверяет DMARC.' },
+  { id: 'basaltman-protocol', name: 'Культ Личности', cat: 'Reverse', desc: 'RCE через десериализацию pickle (.pth весов).' },
+  { id: 'gamee-hack', name: 'Переиграл и уничтожил', cat: 'Crypto + Net', desc: 'Reverse JS-античита и подделка подписи запроса.' },
   { id: 'RES-XBOX-128', name: 'RES-XBOX-128', cat: 'Crypto', desc: 'AES-128: ключ и шифротекст спрятаны в опечатках.' },
-  { id: 'gamee-hack', name: 'Переиграл и уничтожил', cat: 'Crypto', desc: 'Reverse JS-античита в мини-игре Telegram.' },
-  { id: 'basaltman-protocol', name: 'Культ Личности', cat: 'Crypto', desc: 'RCE через десериализацию pickle (.pth).' },
-  { id: 'qrcode-cipher', name: 'Шифр в QR-коде', cat: 'Stegano', desc: 'Полезная нагрузка скрыта в значениях пикселей.' },
-  { id: 'nanogram', name: 'Nanogram', cat: 'Stegano', desc: 'Текст → нонограмма → QR-код с флагом.' },
-  { id: 'ai-secret-keeper', name: 'ХранИИтель секретов', cat: 'Stegano', desc: 'Prompt injection: вытащить секрет из system prompt.' },
 ];
 
 const catColor: Record<string, string> = {
   Network: 'bg-slide-accent text-white',
   Crypto: 'bg-slide-primary text-white',
-  Stegano: 'bg-slide-gray-200 text-slide-primary',
+  Stegano: 'bg-slide-gray-900 text-white',
+  Reverse: 'bg-slide-accent text-white',
+  AI: 'bg-slide-primary text-white',
+  'Crypto + Net': 'bg-slide-accent text-white',
 };
 
 export default function Slide05TasksOverview() {
@@ -42,15 +45,15 @@ export default function Slide05TasksOverview() {
                 </span>
                 <span
                   className={`px-3 py-1 rounded-full slide-chrome font-semibold ${catColor[t.cat]}`}
-                  style={{ fontSize: 16 }}
+                  style={{ fontSize: 15 }}
                 >
                   {t.cat}
                 </span>
               </div>
-              <h3 className="font-semibold text-slide-primary mb-2" style={{ fontSize: 24, lineHeight: 1.15 }}>
+              <h3 className="font-semibold text-slide-primary mb-2" style={{ fontSize: 22, lineHeight: 1.15 }}>
                 {t.name}
               </h3>
-              <p className="text-slide-gray-600 font-light" style={{ fontSize: 18, lineHeight: 1.3 }}>
+              <p className="text-slide-gray-600 font-light" style={{ fontSize: 17, lineHeight: 1.3 }}>
                 {t.desc}
               </p>
             </div>
