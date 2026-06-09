@@ -26,7 +26,7 @@ export default function Slide11Conclusion() {
           <div className="grid grid-cols-3 gap-10 mb-16">
             {[
               { v: '9', l: 'авторских задач' },
-              { v: '3', l: 'категории' },
+              { v: '4', l: 'категории' },
               { v: '24/7', l: 'доступ к борде' },
             ].map((m, i) => (
               <div key={i}>

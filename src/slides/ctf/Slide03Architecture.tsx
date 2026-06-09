@@ -15,8 +15,8 @@ const stack = [
   },
   {
     icon: Globe,
-    title: 'DuckDNS + HTTPS',
-    text: 'Публичный домен cyberkek.duckdns.org, TLS-сертификат, доступ из любой сети.',
+    title: 'Caddy + DuckDNS',
+    text: 'Caddy проксирует трафик до CTFd и автоматически получает TLS-сертификат Let’s Encrypt. Публичный домен — cyberkek.duckdns.org.',
   },
   {
     icon: Database,
