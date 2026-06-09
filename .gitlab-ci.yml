@@ -1,0 +1,36 @@
+image: oven/bun:latest
+
+stages:
+  - build
+  - deploy
+
+variables:
+  BUN_INSTALL_CACHE_DIR: .bun-cache
+
+build:
+  stage: build
+  script:
+    - bun install
+    - bun run build
+    - cp dist/index.html dist/404.html
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour
+  cache:
+    paths:
+      - $BUN_INSTALL_CACHE_DIR
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - mkdir -p public
+    - cp -r dist/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+    - master
