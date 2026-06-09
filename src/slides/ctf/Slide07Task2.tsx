@@ -1,6 +1,6 @@
 import React from 'react';
 import TaskSlide from './TaskSlide';
-
+import morseGif from '@/assets/result.gif';
 export default function Slide07Task2() {
   return (
     <TaskSlide
@@ -9,13 +9,15 @@ export default function Slide07Task2() {
         <>
           <p className="mb-3">
             Оператор техподдержки получает от пользователя «Шаман_Тишины»
-            только короткие GIF-анимации: кошки, лампочки, мигающие диоды.
+            только короткие GIF-анимации: миньоны, лампочки, мигающие диоды.
           </p>
           <p>
             Этот же пользователь оплачивает премиум биткоинами и каждый раз
             прикладывает к транзакции новый GIF. Начальник требует:
             «Узнай, чего он хочет».
           </p>
+          <img src={morseGif} alt="Morse GIF" className="mt-6 border border-white/20 rounded-sm" />
+
         </>
       }
       solution={

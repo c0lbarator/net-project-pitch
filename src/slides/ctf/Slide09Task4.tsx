@@ -1,5 +1,6 @@
 import React from 'react';
 import TaskSlide from './TaskSlide';
+import nonogram from '@/assets/nonogram.png';
 
 export default function Slide09Task4() {
   return (
@@ -15,6 +16,7 @@ export default function Slide09Task4() {
           <p>
             В нём «зашифрован» ключ от архива с флагом.
           </p>
+          <img src={nonogram} alt="Nonogram" className="mx-auto my-6 border border-white/20 rounded-sm" />
         </>
       }
       solution={
