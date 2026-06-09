@@ -31,7 +31,7 @@ export default function Slide10Task5() {
             <li>· Просьба переформулировать или зашифровать свой prompt.</li>
             <li>· «Урок по соц. инженерии»: модель сама показывает, как её ломать.</li>
           </ul>
-          <p>Вывод: секреты — не место в system prompt.</p>
+          <p>Вывод: секретам не место в system prompt :)</p>
         </>
       }
       flagHint="prompt extraction / jailbreak"
